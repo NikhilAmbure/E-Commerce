@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Login Page</title>
+
+    <!-- CSS -->
+    <style>
+        * {
+            font-family: Roboto;
+        }
+
+        body {
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .Login-Page {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 10px lightgray;
+        }
+
+        .Login-Form {
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(4, 210, 210);
+        }
+
+        .text {
+            font-size: 26px;
+            font-family: Roboto;
+            font-weight: bold;
+            color: white;
+        }
+
+        .Email {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .First {
+            display: flex;
+            height: 40px;
+            flex: 3;
+            outline: none;
+        }
+
+        .First:active {
+            border: none;
+            outline: none;
+        }
+
+
+        .email-phone {
+            width: 280px;
+            border: 1px solid lightgray;
+            padding-left: 10px;
+            border-radius: 3px;
+        }
+
+        .contact-img {
+            display: flex;
+            margin-left: 30px;
+            justify-content: end;
+            cursor: pointer;
+        }
+
+        .contact-img img {
+            background-color: rgb(4, 210, 210);
+            width: 42px;
+            height: 40px;
+            border-radius: 3px;
+        }
+
+        .password {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .pass {
+            width: 280px;
+            padding-left: 10px;
+            border-radius: 3px;
+            border: 1px solid lightgray;
+        }
+
+        .text2 {
+            margin-left: 30px;
+            font-size: 13px;
+            color: rgb(7, 173, 173);
+            cursor: pointer;
+        }
+
+        .text2:hover {
+            text-decoration: underline;
+        }
+
+        .log-in {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-button {
+            width: 340px;
+            padding: 10px 10px;
+            background-color: rgb(4, 210, 210);
+            border-radius: 30px;
+            border: none;
+            color: white;
+            font-size: 14px;
+            margin-left: -3px;
+            transition: opacity 0.15s;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        .login-button:hover {
+            opacity: 0.7;
+        }
+
+        .login-button:active {
+            opacity: 0.5;
+        }
+
+        .Signup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text3 {
+            font-size: 14px;
+            width: 200px;
+            letter-spacing: 1px;
+        }
+
+        .now {
+            color: rgb(7, 173, 173);
+            cursor: pointer;
+        }
+
+        .now:hover {
+            text-decoration: underline;
+        }
+
+        #message {
+            display: none;
+            color: red;
+        }
+
+        input:placeholder-shown+#message {
+            display: block;
+        }
+
+        input:not(:placeholder-shown)+#message {
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section class="Login-Page">
+            <div class="Login-Form">
+                <p class="text">
+                    Login Form
+                </p>
+            </div>
+            <div class="Email">
+                <div class="contact-img">
+                    <img src="/Login Form/Images/contact.png" alt="">
+                </div>
+                <div class="First">
+                    <input class="email-phone" type="text" placeholder="Email or Phone">
+                </div>
+            </div>
+            <div class="password">
+                <div class="contact-img">
+                    <img src="/Login Form/Images/icons_password-512.webp" alt="">
+                </div>
+                <div class="First">
+                    <input class="pass" type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="">
+                <p class="text2">
+                    Forgot password?
+                </p>
+            </div>
+            <div class="log-in">
+                <button class="login-button">
+                    Login
+                </button>
+            </div>
+            <div class="Signup">
+                <p class="text3">
+                    Not a member?
+                    <span class="now">Signup now</span>
+                </p>
+            </div>
+            <p id="message">Please enter both username and password.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
